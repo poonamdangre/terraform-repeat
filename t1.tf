@@ -9,5 +9,5 @@ resource "aws_instance" "my_ec2" {
         name = "myinstance"
         env = "devops"
     }
-    vpc_security_group_id = ["sg-08e3b62ba55c6092d"]
+    vpc_security_group_ids = ["sg-08e3b62ba55c6092d"]
 }
