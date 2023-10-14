@@ -1,12 +1,16 @@
 terraform {
-    backend "s3" {
-        bucket = "terraform12345"
-        key = "terraform.tfstate"
-    }
+  backend "s3" {
+    bucket = "terraform12345"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
+  }
 }
+
+
 provider "aws" {
     region = "us-east-1"
 }
+
 resource "aws_instance" "my_instance" {
     ami = "ami-041feb57c611358bd"
     instance_type = "t2.micro"
